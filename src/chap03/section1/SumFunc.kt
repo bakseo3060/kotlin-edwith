@@ -7,18 +7,16 @@ package chap03.section1
 *   - a, b 로부터 자료형이 추론되어 자료형 생략 가능한 것!
 *
 * */
-fun sum(a: Int, b: Int) = a + b
+fun sum(a: Int, b: Int = 5) = a + b
 
 fun max(a: Int, b: Int) = if (a > b) a else b
 
 //또한 반환값은 생략가능한데, 반환값의 자료형을 Unit으로 지정하거나 생략하는 방식으로 해야한다.
-fun outfunc(name: String) {
-    println("Name: $name")
-}
+fun outfunc(name: String) = println("Name: $name")
 
 fun main() {
     val result1 = sum(2, 3)
-
+    val result3 = sum(2)
     val a = 3
     val b = 5
 
@@ -26,6 +24,7 @@ fun main() {
     outfunc("Seojun")
     println(result1)
     println(result2)
+    println(result3)
 }
 
 /*
